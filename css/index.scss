@@ -7,12 +7,12 @@
 
 $red: hsl(0, 100%, 40%);
 $white: hsl(0, 0%, 95%);
-$yellow: hsl(60, 100%, 45%);
+$yellow: hsl(60, 100%, 40%);
 $roboto: "Roboto", sans-serif;
 $roboto-con: "Roboto Condensed", sans-serif;
 
 header {
-    background: url("../img/budej-bg.jpg");
+    background: url("../img/morava_bronz_dark.png");
     height: 100vh;
     width: 100%;
     background-size: cover;
@@ -34,5 +34,50 @@ header {
         color: $red;
         border: 3px solid $red;
         border-radius: 7px;
+    }
+    display: none;
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid darken($red, 20%);
+
+    .navbar-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            color: $white;
+            text-decoration: none;
+            font-family: $roboto-con;
+            font-size: 22px;
+            transition: all 300ms;
+            padding: 0 14px;
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+
+    .logo {
+        font-family: $roboto-con;
+        font-size: 28px;
+        color: $white;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $roboto-con;
+        img {
+            height: 70px;
+            margin-right: 10px;
+        }
     }
 }
