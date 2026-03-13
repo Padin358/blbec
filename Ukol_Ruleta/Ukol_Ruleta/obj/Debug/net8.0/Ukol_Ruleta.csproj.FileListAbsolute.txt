@@ -1,0 +1,14 @@
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\bin\Debug\net8.0\Ukol_Ruleta.exe
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\bin\Debug\net8.0\Ukol_Ruleta.deps.json
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\bin\Debug\net8.0\Ukol_Ruleta.runtimeconfig.json
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\bin\Debug\net8.0\Ukol_Ruleta.dll
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\bin\Debug\net8.0\Ukol_Ruleta.pdb
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\obj\Debug\net8.0\Ukol_Ruleta.GeneratedMSBuildEditorConfig.editorconfig
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\obj\Debug\net8.0\Ukol_Ruleta.AssemblyInfoInputs.cache
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\obj\Debug\net8.0\Ukol_Ruleta.AssemblyInfo.cs
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\obj\Debug\net8.0\Ukol_Ruleta.csproj.CoreCompileInputs.cache
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\obj\Debug\net8.0\Ukol_Ruleta.dll
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\obj\Debug\net8.0\refint\Ukol_Ruleta.dll
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\obj\Debug\net8.0\Ukol_Ruleta.pdb
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\obj\Debug\net8.0\Ukol_Ruleta.genruntimeconfig.cache
+O:\PVA\Rider\Ukol_Ruleta\Ukol_Ruleta\obj\Debug\net8.0\ref\Ukol_Ruleta.dll
