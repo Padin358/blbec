@@ -5,7 +5,7 @@
 }
 
 header {
-  background: url("../img/morava_bronz_dark.png");
+  background: url("../img/morava_bronz_mid.png");
   height: 100vh;
   width: 100%;
   background-size: cover;
@@ -13,64 +13,243 @@ header {
 
 .red-button {
   padding: 10px 20px;
-  background: hsl(0, 100%, 40%);
-  color: hsl(0, 0%, 95%);
+  background: #cc0000;
+  color: #f2f2f2;
   text-transform: uppercase;
   font-weight: 900;
   text-decoration: none;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20px;
-  border: 3px solid hsl(0, 100%, 40%);
+  border: 3px solid #cc0000;
+  -webkit-transition: all 300ms;
   transition: all 300ms;
 }
+
 .red-button:hover {
-  background: hsl(0, 0%, 95%);
-  color: hsl(0, 100%, 40%);
-  border: 3px solid hsl(0, 100%, 40%);
+  background: #f2f2f2;
+  color: #cc0000;
+  border: 3px solid #cc0000;
   border-radius: 7px;
-}
-.red-button {
-  display: none;
 }
 
 .navbar {
   height: 80px;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 50px 20px;
-  box-sizing: border-box;
-  border-bottom: 1px solid hsl(0, 100%, 20%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom: 1px solid #660000;
 }
+
 .navbar .navbar-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .navbar .navbar-links a {
-  color: hsl(0, 0%, 95%);
+  color: #f2f2f2;
   text-decoration: none;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 22px;
+  -webkit-transition: all 300ms;
   transition: all 300ms;
   padding: 0 14px;
 }
+
 .navbar .navbar-links a:hover {
-  color: hsl(60, 100%, 40%);
+  color: #cccc00;
 }
+
 .navbar .logo {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 28px;
-  color: hsl(0, 0%, 95%);
+  color: #f2f2f2;
   font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Roboto Condensed", sans-serif;
 }
+
 .navbar .logo img {
   height: 70px;
   margin-right: 10px;
-}/*# sourceMappingURL=index.css.map */
+}
+
+.heading-div {
+  position: absolute;
+  left: 100px;
+  bottom: 200px;
+}
+
+.heading-div .heading {
+  font-size: 72px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  color: #f2f2f2;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.socials-div {
+  position: fixed;
+  top: 50%;
+  right: 60px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 16px;
+  z-index: 10;
+}
+
+.socials-div .socials-button {
+  font-size: 20px;
+  padding: 12px;
+  background: #f2f2f2;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  border: 2px solid #f2f2f2;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.socials-div .socials-button:hover {
+  border: 2px solid #cc0000;
+  color: #cc0000;
+}
+
+.home-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 64px;
+  padding: 100px;
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+}
+
+.home-news::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  background-color: #a80000;
+  border-radius: 0 0 24px 0;
+  z-index: 0;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+}
+
+.home-news-item {
+  width: 400px;
+  height: 400px;
+  background: url("../img/budej-bg.jpg");
+  background-size: cover;
+  position: relative;
+  border-radius: 25px;
+}
+
+.home-news-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+  z-index: 0;
+  border-radius: 25px;
+}
+
+.home-news-item div {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1;
+}
+
+.home-news-item div p {
+  color: #f2f2f2;
+  font-size: 24px;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-bottom: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+main {
+  height: 400vh;
+}
+
+.repre {
+  position: absolute;
+  bottom: 0;
+  left: 64px;
+  z-index: 1;
+}
+
+.repre .heading-2 {
+  color: #f2f2f2;
+  font-size: 50px;
+  font-weight: 900;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=index.css.map */
