@@ -35,55 +35,61 @@
     </header>
     <main>
         <div class="home-news">
-            <div class="home-news-item">
-                <div class="">
-                    <p class="">Moravské Budějovice vyhrály ligu!</p>
-                    <a href="" class="red-button">celý článek</a>
+            <div class="home-news-scroll" id="newsScroll">
+                <div class="home-news-item">
+                    <div>
+                        <p>Moravské Budějovice vyhrály ligu!</p>
+                        <a href="" class="red-button">celý článek</a>
+                    </div>
+                </div>
+                <div class="home-news-item">
+                    <div>
+                        <p>Moravské Budějovice vyhrály ligu!</p>
+                        <a href="" class="red-button">celý článek</a>
+                    </div>
+                </div>
+                <div class="home-news-item">
+                    <div>
+                        <p>Moravské Budějovice vyhrály ligu!</p>
+                        <a href="" class="red-button">celý článek</a>
+                    </div>
+                </div>
+                <div class="home-news-item">
+                    <div>
+                        <p>Moravské Budějovice vyhrály ligu!</p>
+                        <a href="" class="red-button">celý článek</a>
+                    </div>
+                </div>
+                <div class="home-news-item">
+                    <div>
+                        <p>Moravské Budějovice vyhrály ligu!</p>
+                        <a href="" class="red-button">celý článek</a>
+                    </div>
                 </div>
             </div>
-            <div class="home-news-item">
-                <div class="">
-                    <p class="">Moravské Budějovice vyhrály ligu!</p>
-                    <a href="" class="red-button">celý článek</a>
-                </div>
-            </div>
-            <div class="home-news-item">
-                <div class="">
-                    <p class="">Moravské Budějovice vyhrály ligu!</p>
-                    <a href="" class="red-button">celý článek</a>
-                </div>
-            </div>
-            <div class="home-news-item">
-                <div class="">
-                    <p class="">Moravské Budějovice vyhrály ligu!</p>
-                    <a href="" class="red-button">celý článek</a>
-                </div>
-            </div>
-            <div class="home-news-item">
-                <div class="">
-                    <p class="">Moravské Budějovice vyhrály ligu!</p>
-                    <a href="" class="red-button">celý článek</a>
-                </div>
+            <div class="home-news-arrows">
+                <button class="arrow-btn" id="arrowLeft"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="arrow-btn" id="arrowRight"><i class="fa-solid fa-arrow-right"></i></button>
             </div>
             <div class="repre">
                 <h2 class="heading-2">Reprezentace</h2>
                 <div class="repre-div">
-                    <div class="repre-item">
+                    <a class="repre-item" href="">
                         <img src="img/morava_logo.png" alt="">
-                        <p class="">Národní tým</p>
-                    </div>
-                    <div class="repre-item">
-                        <img src="img/morava_logo.png" alt="">
-                        <p class="">Ženské reprezentace</p>
-                    </div>
-                    <div class="repre-item">
-                        <img src="img/morava_logo.png" alt="">
-                        <p class="">Mládežnické reprezentace</p>
-                    </div>
-                    <div class="repre-item">
-                        <img src="img/morava_logo.png" alt="">
-                        <p class="">Para hokej</p>
-                    </div>
+                        <p>Národní tým</p>
+                    </a>
+                    <a class="repre-item" href="">
+                        <img src="img/morava_logo_ženy.png" alt="">
+                        <p>Ženské reprezentace</p>
+                    </a>
+                    <a class="repre-item" href="">
+                        <img src="img/morava_logo_mládež.png" alt="">
+                        <p>Mládežnické reprezentace</p>
+                    </a>
+                    <a class="repre-item" href="">
+                        <img src="img/morava_logo_para.png" alt="">
+                        <p>Para hokej</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -91,5 +97,18 @@
     <footer>
 
     </footer>
+    <script>
+        const scroll = document.getElementById('newsScroll');
+        const btnLeft = document.getElementById('arrowLeft');
+        const btnRight = document.getElementById('arrowRight');
+
+        btnLeft.addEventListener('click', () => {
+            scroll.scrollBy({ left: -464, behavior: 'smooth' });
+        });
+
+        btnRight.addEventListener('click', () => {
+            scroll.scrollBy({ left: 464, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
