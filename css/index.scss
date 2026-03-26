@@ -132,15 +132,26 @@ header {
     position: absolute;
     left: 100px;
     bottom: 200px;
-    .heading {
-        font-size: 72px;
-        font-family: $roboto-con;
-        font-weight: 900;
-        color: $white;
-        line-height: 1.15;
-        text-transform: uppercase;
-        margin-bottom: 50px;
-    }
+}
+
+.heading {
+    font-size: 72px;
+    font-family: $roboto-con;
+    font-weight: 900;
+    color: $white;
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.heading-2 {
+    font-size: 50px;
+    font-family: $roboto-con;
+    font-weight: 900;
+    color: $white;
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin-bottom: 50px;
 }
 
 .socials-div {
@@ -282,10 +293,6 @@ header {
     }
 }
 
-main {
-    height: 400vh;
-}
-
 .repre {
     position: absolute;
     left: 64px;
@@ -362,44 +369,47 @@ main {
     .repre-item:nth-child(4) p { color: darken($red, 10%) !important; }
 }
 
-main {
-    height: 400vh;
-}
+// .repre-div {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: start;
+//     align-items: center;
+//     gap: 48px;
 
-.repre {
-    position: absolute;
-    left: 64px;
-    bottom: -500px;
-    z-index: 1;
-    .heading-2 {
-        color: $white;
-        font-size: 50px;
-        font-weight: 900;
-        font-family: $roboto-con;
-        text-transform: uppercase;
-    }
-}
+//     .repre-item {
+//         background: url("../img/morava_bronz_mid.png") center/cover no-repeat;
+//         height: 500px;
+//         width: 300px;
+//         border-radius: 25px;
 
-.repre-div {
+//         p {
+//             font-size: 20px;
+//             color: $white;
+//             font-weight: 900;
+//             font-family: $roboto-con;
+//             text-transform: uppercase;
+//         }
+//     }
+// }
+
+.invites-div {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
+    gap: 0px;
     align-items: center;
-    gap: 48px;
+    margin-top: 500px;
+}
 
-    .repre-item {
-        background: url("../img/morava_bronz_mid.png") center/cover no-repeat;
-        height: 500px;
-        width: 300px;
-        border-radius: 25px;
+.invites-div a {
+    width: 38%;
+}
 
-        p {
-            font-size: 20px;
-            color: $white;
-            font-weight: 900;
-            font-family: $roboto-con;
-            text-transform: uppercase;
-        }
-    }
+.invites-div a img {
+    width: 100%;
+    display: block;
+}
+
+.matches-section-div {
+
 }
