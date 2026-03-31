@@ -425,3 +425,28 @@ header {
     align-items: center;
     margin-top: 16px;
 }
+
+.match-single {
+    background: url("../img/zapas_bg_darker.jpg");
+    height: 250px;
+    width: 650px;
+    padding: 24px;
+    color: $white;
+    background-position: center;
+    background-size: cover;
+
+    .match-heading {
+        font-size: 24px;
+        font-family: $roboto-con;
+        color: $white;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    .match-team {
+        font-size: 14px;
+        font-family: $roboto;
+        color: $white;
+        font-weight: 400;
+    }
+}
