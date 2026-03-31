@@ -394,6 +394,7 @@ header {
   gap: 0;
   align-items: center;
   margin-top: 16px;
+  overflow: scroll hidden;
 }
 
 .match-single {
@@ -417,4 +418,23 @@ header {
   font-family: "Roboto", sans-serif;
   color: hsl(0, 0%, 95%);
   font-weight: 400;
+}
+
+.match-flags-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  padding: 8px;
+}
+.match-flags-div .match-flag {
+  font-size: 32px;
+}
+
+.match-date {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=index.css.map */
