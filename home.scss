@@ -1,27 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-$red: hsl(0, 100%, 40%);
-$white: hsl(0, 0%, 95%);
-$yellow: hsl(60, 100%, 40%);
-$blue: hsl(212, 80%, 42%);
-$red_darker: darken($red, 10%);
-$red_dark: darken($red, 20%);
-
-$roboto: "Roboto", sans-serif;
-$roboto-con: "Roboto Condensed", sans-serif;
-
-header {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
 .video-bg {
     position: absolute;
     top: 0;
@@ -79,60 +55,6 @@ header {
     }
 }
 
-.navbar {
-    height: 80px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 20px;
-    box-sizing: border-box;
-    border-bottom: 1px solid $red_dark;
-
-    .navbar-links {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        a {
-            color: $white;
-            text-decoration: none;
-            font-family: $roboto-con;
-            font-size: 22px;
-            transition: all 300ms;
-            padding: 0 14px;
-            &:hover {
-                color: $yellow;
-            }
-            &::after {
-                content: '';
-                display: block;
-                transform: scaleX(0) translateY(-3px);
-                border-bottom: 2px solid $yellow;
-                transition: all 300ms;
-            }
-            &:hover::after {
-                transform: scaleX(1) translateY(-3px);
-            }
-        }
-    }
-
-    .logo {
-        font-family: $roboto-con;
-        font-size: 28px;
-        color: $white;
-        font-weight: 900;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $roboto-con;
-        img {
-            height: 92px;
-            margin-right: 10px;
-        }
-    }
-}
-
 .heading-div {
     position: absolute;
     left: 100px;
@@ -178,6 +100,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        
         border-radius: 5px;
         border: 2px solid $white;
         transition: all 300ms;
@@ -191,7 +114,7 @@ header {
 .home-news {
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    padding: 100px 0 100px 100px;
     transform: translateY(-150px);
     position: relative;
     &::before {
@@ -475,70 +398,5 @@ header {
     margin-bottom: 20px;
 }
 
-footer {
-    background: $red_darker;
-    height: 350px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    color: $white;
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 16px;
-    font-family: $roboto-con;
-    gap: 124px;
-}
 
-.footer-logo-div {
-    img {
-        height: 16rem;
-    }
-}
 
-.footer-inside-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    a {
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-.socials-div-blue {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
-    z-index: 10;
-    .socials-button {
-        font-size: 20px;
-        padding: 12px;
-        background: $white;
-        width: 40px;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        border: 2px solid $white;
-        transition: all 300ms;
-        color: $red_darker;
-        &:hover {
-            border: 2px solid $blue;
-            background: $blue;
-            color: $white;
-        }
-    } 
-}
-
-.footer-div-socials {
-    p {
-        font-size: 22px;
-    }
-}

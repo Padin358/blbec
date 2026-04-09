@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css" integrity="sha512-NhLySQDkiKSKnT+R795uaHWRQ7D3VuIvgeOLCK8cWq4w5fq4sWF90gj8eURpTqn/f1mFzqClpOz8JPlgVTLfFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="teams.css">
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="shortcut icon" href="../img/morava_logo.png" type="image/x-icon">
+    <title>Úvod | Moravský hokej</title>
+</head>
+<body>
+    <div class="socials-div">
+        <a href="" class="socials-button"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="" class="socials-button"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="" class="socials-button"><i class="fa-brands fa-instagram"></i></a>
+        <a href="" class="socials-button"><i class="fa-brands fa-youtube"></i></a>
+        <a href="" class="socials-button"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+    <header>
+        <!-- Video BG -->
+        <div class="video-bg">
+            <div id="ytplayer"></div>
+            <div class="video-overlay"></div>
+        </div>
+    
+        <div class="navbar">
+            <a href="../" class="logo"><img src="../img/morava_logo.png" alt="Moravský hokej">Moravský hokej</a>
+            <div class="navbar-links divide-x-2 divide-[#cc0000]/50">
+                <a href="">Novinky</a>
+                <a href="">Reprezentační týmy</a>
+                <a href="">Vstupenky</a>
+                <a href="">Projekty</a>
+                <a href="">Fanshop</a>
+                <a href="">Fanzóna</a>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <div class="footer-logo-div footer-inside-div">
+            <img src="img/morava_logo.png" alt="">
+        </div>
+        <div class="footer-inside-div">
+            <a href="#" class="">Organizace</a>
+            <a href="#" class="">Kontaktní údaje</a>
+            <a href="#" class="">Výkonný výbor</a>
+            <a href="#" class="">Zaměstnanci</a>
+            <a href="#" class="">Krajské pobočné</a>
+            <a href="#" class="">Spolky</a>
+            <a href="#" class="">Partneři</a>
+            <a href="#" class="">Média</a>
+            <a href="#" class="">Pojď hrát hokej</a>
+        </div>
+        <div class="footer-inside-div">
+            <a href="#" class="">Rozhodčí</a>
+            <a href="#" class="">Pro-hockey s.r.o.</a>
+            <a href="#" class="">Cz.hockey s.r.o.</a>
+            <a href="#" class="">apk lh</a>
+            <a href="#" class="">spk lh</a>
+            <a href="#" class="">adk lh</a>
+            <a href="#" class="">Nf Ivana Hlinky</a>
+            <a href="#" class="">GDPR</a>
+            <a href="#" class="">Cookies</a>
+        </div>
+        <div class="footer-div-socials footer-inside-div">
+            <p>Sociální sítě</p>
+            <div class="socials-div-blue">
+                <a href="" class="socials-button"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="" class="socials-button"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="" class="socials-button"><i class="fa-brands fa-instagram"></i></a>
+                <a href="" class="socials-button"><i class="fa-brands fa-youtube"></i></a>
+                <a href="" class="socials-button"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const scroll = document.getElementById('newsScroll');
+        const btnLeft = document.getElementById('arrowLeft');
+        const btnRight = document.getElementById('arrowRight');
+
+        btnLeft.addEventListener('click', () => {
+            scroll.scrollBy({ left: -464, behavior: 'smooth' });
+        });
+
+        btnRight.addEventListener('click', () => {
+            scroll.scrollBy({ left: 464, behavior: 'smooth' });
+        });
+
+        // YouTube IFrame API
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('ytplayer', {
+                videoId: 'iQNw15j2D4s',
+                playerVars: {
+                    autoplay: 1,
+                    mute: 1,
+                    loop: 1,
+                    playlist: 'iQNw15j2D4s',
+                    controls: 0,
+                    showinfo: 0,
+                    rel: 0,
+                    modestbranding: 1,
+                    iv_load_policy: 3,
+                    disablekb: 1,
+                    fs: 0
+                },
+                events: {
+                    onReady: function(e) { e.target.playVideo(); },
+                    onStateChange: function(e) {
+                        if (e.data === YT.PlayerState.ENDED) {
+                            e.target.seekTo(0);
+                            e.target.playVideo();
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
