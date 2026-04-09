@@ -186,7 +186,7 @@ header {
   left: 0;
   width: 80%;
   height: 130%;
-  background-color: hsl(0, 100%, 33%);
+  background-color: hsl(0, 100%, 30%);
   border-radius: 0 0 24px 0;
   z-index: 0;
   transform: translateY(150px);
@@ -215,7 +215,7 @@ header {
   display: flex;
   flex-direction: row;
   gap: 16px;
-  margin-top: 24px;
+  margin: 24px 0;
   z-index: 1;
   position: relative;
 }
@@ -437,4 +437,65 @@ header {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+footer {
+  background: hsl(0, 100%, 30%);
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  gap: 124px;
+}
+
+.footer-logo-div img {
+  height: 16rem;
+}
+
+.footer-inside-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-inside-div a:hover {
+  text-decoration: underline;
+}
+
+.socials-div-blue {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  z-index: 10;
+}
+.socials-div-blue .socials-button {
+  font-size: 20px;
+  padding: 12px;
+  background: hsl(0, 0%, 95%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid hsl(0, 0%, 95%);
+  transition: all 300ms;
+  color: hsl(0, 100%, 30%);
+}
+.socials-div-blue .socials-button:hover {
+  border: 2px solid hsl(212, 80%, 42%);
+  background: hsl(212, 80%, 42%);
+  color: hsl(0, 0%, 95%);
+}
+
+.footer-div-socials p {
+  font-size: 22px;
 }/*# sourceMappingURL=index.css.map */

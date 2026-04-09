@@ -9,6 +9,8 @@ $red: hsl(0, 100%, 40%);
 $white: hsl(0, 0%, 95%);
 $yellow: hsl(60, 100%, 40%);
 $blue: hsl(212, 80%, 42%);
+$red_darker: darken($red, 10%);
+$red_dark: darken($red, 20%);
 
 $roboto: "Roboto", sans-serif;
 $roboto-con: "Roboto Condensed", sans-serif;
@@ -86,7 +88,7 @@ header {
     justify-content: space-between;
     padding: 50px 20px;
     box-sizing: border-box;
-    border-bottom: 1px solid darken($red, 20%);
+    border-bottom: 1px solid $red_dark;
 
     .navbar-links {
         display: flex;
@@ -199,7 +201,7 @@ header {
         left: 0;
         width: 80%;
         height: 130%;
-        background-color: darken($red, 7);
+        background-color: $red_darker;
         border-radius: 0 0 24px 0;
         z-index: 0;
         transform: translateY(150px);
@@ -229,7 +231,7 @@ header {
     display: flex;
     flex-direction: row;
     gap: 16px;
-    margin-top: 24px;
+    margin: 24px 0;
     z-index: 1;
     position: relative;
 }
@@ -341,7 +343,7 @@ header {
             left: 0;
             width: 100%;
             height: 120px;
-            background: darken($red, 10%);
+            background: $red_darker;
             clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0% 100%);
             z-index: 1;
         }
@@ -366,10 +368,10 @@ header {
         }
     }
     .repre-item:nth-child(1)::after { background: darken(#FFD700, 15%); }
-    .repre-item:nth-child(2)::after { background: darken($red, 10%); }
+    .repre-item:nth-child(2)::after { background: $red_darker; }
     .repre-item:nth-child(3)::after { background: darken(#1565C0, 10%); }
     .repre-item:nth-child(4)::after { background: darken(#ffffff, 10%); }
-    .repre-item:nth-child(4) p { color: darken($red, 10%) !important; }
+    .repre-item:nth-child(4) p { color: $red_darker !important; }
 }
 
 // .repre-div {
@@ -471,4 +473,72 @@ header {
     font-family: $roboto;
     font-size: 16px;
     margin-bottom: 20px;
+}
+
+footer {
+    background: $red_darker;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 16px;
+    font-family: $roboto-con;
+    gap: 124px;
+}
+
+.footer-logo-div {
+    img {
+        height: 16rem;
+    }
+}
+
+.footer-inside-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.socials-div-blue {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    z-index: 10;
+    .socials-button {
+        font-size: 20px;
+        padding: 12px;
+        background: $white;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        border: 2px solid $white;
+        transition: all 300ms;
+        color: $red_darker;
+        &:hover {
+            border: 2px solid $blue;
+            background: $blue;
+            color: $white;
+        }
+    } 
+}
+
+.footer-div-socials {
+    p {
+        font-size: 22px;
+    }
 }
