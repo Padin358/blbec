@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  background: hsl(0, 100%, 30%);
+  height: 350px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  gap: 124px;
+}
+
+.footer-logo-div img {
+  height: 16rem;
+}
+
+.footer-inside-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-inside-div a:hover {
+  text-decoration: underline;
+}
+
+.socials-div-blue {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  z-index: 10;
+}
+.socials-div-blue .socials-button {
+  font-size: 20px;
+  padding: 12px;
+  background: hsl(0, 0%, 95%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid hsl(0, 0%, 95%);
+  transition: all 300ms;
+  color: hsl(0, 100%, 30%);
+}
+.socials-div-blue .socials-button:hover {
+  border: 2px solid hsl(212, 80%, 42%);
+  background: hsl(212, 80%, 42%);
+  color: hsl(0, 0%, 95%);
+  text-decoration: none;
+}
+
+.footer-div-socials p {
+  font-size: 22px;
+}
+
+.heading-div {
+  position: absolute;
+  left: 100px;
+  bottom: 200px;
+}
+
+.heading {
+  font-size: 72px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  color: hsl(0, 0%, 95%);
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.heading-2 {
+  font-size: 50px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  color: hsl(0, 0%, 95%);
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.socials-div {
+  position: fixed;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+  z-index: 10;
+  transition: opacity 300ms;
+}
+.socials-div.scrolled {
+  opacity: 0.25;
+}
+.socials-div.scrolled:hover {
+  opacity: 1;
+}
+.socials-div .socials-button {
+  font-size: 20px;
+  padding: 12px;
+  background: hsl(0, 0%, 95%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid hsl(0, 0%, 95%);
+  transition: all 300ms;
+}
+.socials-div .socials-button:hover {
+  border: 2px solid hsl(0, 100%, 40%);
+  color: hsl(0, 100%, 40%);
+}
+
+#active-link::after {
+  content: "";
+  display: block;
+  transform: scaleX(1) translateY(-3px) !important;
+  border-bottom: 2px solid hsl(60, 100%, 40%);
+}
+
+.heading-3 {
+  font-size: 50px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  color: hsl(0, 0%, 95%);
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin: 25px 0 25px 75px;
+}
+
+main {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.navbar-bg {
+  background: hsl(212, 80%, 22%);
+  border-bottom: 1px solid hsl(212, 80%, 12%);
+}
+
+.navbar {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+.navbar .navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .navbar-links a {
+  color: hsl(0, 0%, 95%);
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 22px;
+  transition: all 300ms;
+  padding: 0 14px;
+}
+.navbar .navbar-links a:hover {
+  color: hsl(60, 100%, 40%);
+}
+.navbar .navbar-links a::after {
+  content: "";
+  display: block;
+  transform: scaleX(0) translateY(-3px);
+  border-bottom: 2px solid hsl(60, 100%, 40%);
+  transition: all 300ms;
+}
+.navbar .navbar-links a:hover::after {
+  transform: scaleX(1) translateY(-3px);
+}
+.navbar .logo {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 28px;
+  color: hsl(0, 0%, 95%);
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.navbar .logo img {
+  height: 92px;
+  margin-right: 10px;
+}
+
+.red-button {
+  padding: 10px 20px;
+  background: hsl(0, 100%, 40%);
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  border: 3px solid hsl(0, 100%, 40%);
+  transition: all 300ms;
+  display: inline-block;
+}
+.red-button:hover {
+  background: hsl(0, 0%, 95%);
+  color: hsl(0, 100%, 40%);
+  border: 3px solid hsl(0, 100%, 40%);
+  border-radius: 7px;
+}
+
+.red-button-big {
+  padding: 10px 20px;
+  background: hsl(0, 100%, 40%);
+  color: hsl(0, 0%, 95%);
+  text-transform: uppercase;
+  font-weight: 900;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 48px;
+  border: 3px solid hsl(0, 100%, 40%);
+  transition: all 300ms;
+  display: block;
+  border-radius: 16px;
+  width: 70%;
+  margin: 48px auto;
+  text-align: center;
+}
+.red-button-big:hover {
+  background: hsl(0, 0%, 95%);
+  color: hsl(0, 100%, 40%);
+  border: 3px solid hsl(0, 100%, 40%);
+  border-radius: 25px;
+}
+
+.banner {
+  background: url("../img/tickets-banner-bg.jpg") top/cover no-repeat;
+  height: 300px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 10%, rgba(0, 0, 0, 0.2) 100%);
+}
+.banner .banner-inside {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  top: 40%;
+}
+.banner .banner-inside p {
+  color: hsl(0, 0%, 95%);
+  font-size: 60px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.tickets-div {
+  width: 100%;
+  text-align: left;
+}
+.tickets-div .tickets-heading {
+  font-size: 40px;
+  color: hsl(212, 80%, 22%);
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 12px;
+}
+.tickets-div .tickets-small-heading {
+  font-size: 26px;
+  color: hsl(212, 80%, 22%);
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.tickets-div .tickets-text {
+  font-family: "Roboto", sans-serif;
+  line-height: 2.5;
+  font-size: 18px;
+}
+.tickets-div .tickets-text a {
+  text-decoration: underline;
+  transition: color 300ms;
+}
+.tickets-div .tickets-text a:hover {
+  color: hsl(0, 100%, 40%);
+}
+.tickets-div b {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  display: block;
+  margin: 0 auto;
+}
+.tickets-div hr {
+  color: hsl(212, 80%, 22%);
+  margin: 32px 82px;
+}
+
+.tickets-list {
+  list-style: disc;
+  padding-left: 20px;
+  color: hsl(0, 100%, 40%);
+}
+.tickets-list li p {
+  color: #000;
+}/*# sourceMappingURL=tickets.css.map */
