@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.css" integrity="sha512-NhLySQDkiKSKnT+R795uaHWRQ7D3VuIvgeOLCK8cWq4w5fq4sWF90gj8eURpTqn/f1mFzqClpOz8JPlgVTLfFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="teams.css">
-    <link rel="stylesheet" href="../css/all.css">
+    <!-- <link rel="stylesheet" href="../css/all.css"> -->
     <link rel="shortcut icon" href="../img/morava_logo.png" type="image/x-icon">
     <title>Úvod | Moravský hokej</title>
 </head>
@@ -18,27 +18,43 @@
         <a href="" class="socials-button"><i class="fa-brands fa-youtube"></i></a>
         <a href="" class="socials-button"><i class="fa-brands fa-tiktok"></i></a>
     </div>
-    <header>
-        <!-- Video BG -->
-        <div class="video-bg">
-            <div id="ytplayer"></div>
-            <div class="video-overlay"></div>
-        </div>
-    
-        <div class="navbar">
-            <a href="../" class="logo"><img src="../img/morava_logo.png" alt="Moravský hokej">Moravský hokej</a>
-            <div class="navbar-links divide-x-2 divide-[#cc0000]/50">
-                <a href="">Novinky</a>
-                <a href="">Reprezentační týmy</a>
-                <a href="">Vstupenky</a>
-                <a href="">Projekty</a>
-                <a href="">Fanshop</a>
-                <a href="">Fanzóna</a>
+    <header>    
+        <div class="navbar-bg">
+            <div class="navbar">
+                <a href="../" class="logo"><img src="../img/morava_logo.png" alt="Moravský hokej">Moravský hokej</a>
+                <div class="navbar-links divide-x-2 divide-[#f2f2f2]">
+                    <a href="../news/">Novinky</a>
+                    <a href="#" id="active-link">Reprezentační týmy</a>
+                    <a href="">Vstupenky</a>
+                    <a href="">Projekty</a>
+                    <a href="">Fanshop</a>
+                    <a href="">Fanzóna</a>
+                </div>
             </div>
+            <h1 class="heading-3">Týmy</h1>
         </div>
     </header>
     <main>
-
+        <div class="repre-page-div">
+            <div class="repre-div">
+                <a class="repre-item" href="">
+                    <img src="../img/morava_logo.png" alt="">
+                    <p>Národní tým</p>
+                </a>
+                <a class="repre-item" href="">
+                    <img src="../img/morava_logo_ženy.png" alt="">
+                    <p>Ženské reprezentace</p>
+                </a>
+                <a class="repre-item" href="">
+                    <img src="../img/morava_logo_mládež.png" alt="">
+                    <p>Mládežnické reprezentace</p>
+                </a>
+                <a class="repre-item" href="">
+                    <img src="../img/morava_logo_para.png" alt="">
+                    <p>Para hokej</p>
+                </a>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-logo-div footer-inside-div">
@@ -78,52 +94,15 @@
         </div>
     </footer>
     <script>
-        const scroll = document.getElementById('newsScroll');
-        const btnLeft = document.getElementById('arrowLeft');
-        const btnRight = document.getElementById('arrowRight');
+        const socialsDiv = document.querySelector('.socials-div');
 
-        btnLeft.addEventListener('click', () => {
-            scroll.scrollBy({ left: -464, behavior: 'smooth' });
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                socialsDiv.classList.add('scrolled');
+            } else {
+                socialsDiv.classList.remove('scrolled');
+            }
         });
-
-        btnRight.addEventListener('click', () => {
-            scroll.scrollBy({ left: 464, behavior: 'smooth' });
-        });
-
-        // YouTube IFrame API
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        var player;
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('ytplayer', {
-                videoId: 'iQNw15j2D4s',
-                playerVars: {
-                    autoplay: 1,
-                    mute: 1,
-                    loop: 1,
-                    playlist: 'iQNw15j2D4s',
-                    controls: 0,
-                    showinfo: 0,
-                    rel: 0,
-                    modestbranding: 1,
-                    iv_load_policy: 3,
-                    disablekb: 1,
-                    fs: 0
-                },
-                events: {
-                    onReady: function(e) { e.target.playVideo(); },
-                    onStateChange: function(e) {
-                        if (e.data === YT.PlayerState.ENDED) {
-                            e.target.seekTo(0);
-                            e.target.playVideo();
-                        }
-                    }
-                }
-            });
-        }
     </script>
 </body>
 </html>

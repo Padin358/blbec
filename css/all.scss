@@ -16,10 +16,19 @@ $roboto: "Roboto", sans-serif;
 $roboto-con: "Roboto Condensed", sans-serif;
 
 header {
-    height: 100vh;
     width: 100%;
     position: relative;
     overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
 }
 
 footer {
@@ -91,60 +100,6 @@ footer {
     }
 }
 
-.navbar {
-    height: 80px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 20px;
-    box-sizing: border-box;
-    border-bottom: 1px solid $red_dark;
-
-    .navbar-links {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        a {
-            color: $white;
-            text-decoration: none;
-            font-family: $roboto-con;
-            font-size: 22px;
-            transition: all 300ms;
-            padding: 0 14px;
-            &:hover {
-                color: $yellow;
-            }
-            &::after {
-                content: '';
-                display: block;
-                transform: scaleX(0) translateY(-3px);
-                border-bottom: 2px solid $yellow;
-                transition: all 300ms;
-            }
-            &:hover::after {
-                transform: scaleX(1) translateY(-3px);
-            }
-        }
-    }
-
-    .logo {
-        font-family: $roboto-con;
-        font-size: 28px;
-        color: $white;
-        font-weight: 900;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $roboto-con;
-        img {
-            height: 92px;
-            margin-right: 10px;
-        }
-    }
-}
-
 .heading-div {
     position: absolute;
     left: 100px;
@@ -171,81 +126,81 @@ footer {
     margin-bottom: 50px;
 }
 
-.repre {
-    position: absolute;
-    left: 64px;
-    bottom: -500px;
-    z-index: 1;
-    .heading-2 {
-        color: $white;
-        font-size: 50px;
-        font-weight: 900;
-        font-family: $roboto-con;
-        text-transform: uppercase;
-    }
-}
-.repre-div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
-    gap: 48px;
-    .repre-item {
-        height: 500px;
-        width: 300px;
-        border-radius: 25px;
-        position: relative;
-        overflow: hidden;
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url("../img/morava_bronz_mid.png") center/cover no-repeat;
-            transition: transform 300ms ease;
-            z-index: 0;
-            border-radius: 25px;
-        }
-        &:hover::before {
-            transform: scale(1.1);
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 120px;
-            background: $red_darker;
-            clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0% 100%);
-            z-index: 1;
-        }
-        p {
-            font-size: 32px !important;
-            color: $white;
-            font-weight: 900;
-            font-family: $roboto-con;
-            text-transform: uppercase;
-            position: absolute;
-            bottom: 24px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            z-index: 2;
-        }
-        img {
-            max-width: 248px;
-            margin: 48px auto;
-            position: relative;
-            z-index: 1;
-        }
-    }
-    .repre-item:nth-child(1)::after { background: darken(#FFD700, 15%); }
-    .repre-item:nth-child(2)::after { background: $red_darker; }
-    .repre-item:nth-child(3)::after { background: darken(#1565C0, 10%); }
-    .repre-item:nth-child(4)::after { background: darken(#ffffff, 10%); }
-    .repre-item:nth-child(4) p { color: $red_darker !important; }
-}
+// .repre {
+//     position: absolute;
+//     left: 64px;
+//     bottom: -500px;
+//     z-index: 1;
+//     .heading-2 {
+//         color: $white;
+//         font-size: 50px;
+//         font-weight: 900;
+//         font-family: $roboto-con;
+//         text-transform: uppercase;
+//     }
+// }
+// .repre-div {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: start;
+//     align-items: center;
+//     gap: 48px;
+//     .repre-item {
+//         height: 500px;
+//         width: 300px;
+//         border-radius: 25px;
+//         position: relative;
+//         overflow: hidden;
+//         &::before {
+//             content: '';
+//             position: absolute;
+//             inset: 0;
+//             background: url("../img/morava_bronz_mid.png") center/cover no-repeat;
+//             transition: transform 300ms ease;
+//             z-index: 0;
+//             border-radius: 25px;
+//         }
+//         &:hover::before {
+//             transform: scale(1.1);
+//         }
+//         &::after {
+//             content: '';
+//             position: absolute;
+//             bottom: 0;
+//             left: 0;
+//             width: 100%;
+//             height: 120px;
+//             background: $red_darker;
+//             clip-path: polygon(0 40%, 100% 0%, 100% 100%, 0% 100%);
+//             z-index: 1;
+//         }
+//         p {
+//             font-size: 32px !important;
+//             color: $white;
+//             font-weight: 900;
+//             font-family: $roboto-con;
+//             text-transform: uppercase;
+//             position: absolute;
+//             bottom: 24px;
+//             left: 0;
+//             width: 100%;
+//             text-align: center;
+//             z-index: 2;
+//         }
+//         img {
+//             max-width: 248px;
+//             margin: 48px auto;
+//             position: relative;
+//             z-index: 1;
+//         }
+//     }
+//     .repre-item:nth-child(1)::after { background: darken(#FFD700, 15%); }
+//     .repre-item:nth-child(2)::after { background: $red_darker; }
+//     .repre-item:nth-child(3)::after { background: darken(#1565C0, 10%); }
+//     .repre-item:nth-child(4)::after { background: darken(#ffffff, 10%); }
+//     .repre-item:nth-child(4) p { color: $red_darker !important; }
+// }
 
 .socials-div {
     position: fixed;
@@ -257,6 +212,14 @@ footer {
     flex-wrap: wrap;
     gap: 16px;
     z-index: 10;
+    transition: opacity 300ms;
+    &.scrolled {
+        opacity: 0.25;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
     .socials-button {
         font-size: 20px;
         padding: 12px;
@@ -275,4 +238,21 @@ footer {
             color: $red;
         }
     } 
+}
+
+#active-link::after {
+    content: '';
+    display: block;
+    transform: scaleX(1) translateY(-3px) !important;
+    border-bottom: 2px solid $yellow;
+}
+
+.heading-3 {
+    font-size: 50px;
+    font-family: $roboto-con;
+    font-weight: 900;
+    color: $white;
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin: 25px 0 25px 75px;
 }
