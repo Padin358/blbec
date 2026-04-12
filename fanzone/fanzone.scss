@@ -1,0 +1,253 @@
+@import "../css/all.scss";
+
+$blue_darker: darken($blue, 20);
+
+main {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.navbar-bg {
+    background: darken($blue, 20);
+    border-bottom: 1px solid darken($blue, 30);
+}
+
+.navbar {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    box-sizing: border-box;
+
+    .navbar-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            color: $white;
+            text-decoration: none;
+            font-family: $roboto-con;
+            font-size: 22px;
+            transition: all 300ms;
+            padding: 0 14px;
+            &:hover {
+                color: $yellow;
+            }
+            &::after {
+                content: '';
+                display: block;
+                transform: scaleX(0) translateY(-3px);
+                border-bottom: 2px solid $yellow;
+                transition: all 300ms;
+            }
+            &:hover::after {
+                transform: scaleX(1) translateY(-3px);
+            }
+        }
+    }
+
+    .logo {
+        font-family: $roboto-con;
+        font-size: 28px;
+        color: $white;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $roboto-con;
+        img {
+            height: 92px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.red-button {
+    padding: 10px 20px;
+    background: $red;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-decoration: none;
+    font-family: $roboto-con;
+    font-size: 20px;
+    border: 3px solid $red;
+    transition: all 300ms;
+    display: inline-block;
+    cursor: pointer;
+
+    &:hover {
+        background: $white;
+        color: $red;
+        border: 3px solid $red;
+        border-radius: 7px;
+    }
+}
+
+.projects-layout {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+}
+
+.projects-sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        border-bottom: 1px solid #ccc;
+
+        a {
+            display: block;
+            padding: 12px 0;
+            font-family: $roboto-con;
+            font-weight: 900;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: darken($blue, 20);
+            text-decoration: none;
+            transition: color 300ms;
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}
+
+.fanzone-layout {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+}
+
+.fanzone-main {
+    flex: 1;
+}
+
+.fanzone-banner {
+    position: relative;
+    height: 400px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--bg) center/cover no-repeat;
+        transition: transform 300ms ease;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 100%);
+    }
+
+    .fanzone-banner-inside {
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 2;
+
+        h2 {
+            font-family: $roboto-con;
+            font-weight: 900;
+            font-size: 48px;
+            text-transform: uppercase;
+            color: $white;
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: $white;
+            font-family: $roboto-con;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.fanzone-heading {
+    font-family: $roboto-con;
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: uppercase;
+    color: darken($blue, 20);
+    margin-bottom: 16px;
+}
+
+.fanzone-intro, .fanzone-text {
+    font-family: $roboto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 32px;
+}
+
+.newsletter-form-div {
+    margin-bottom: 48px;
+
+    .newsletter-form {
+        display: flex;
+        gap: 16px;
+        margin-top: 16px;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            flex: 1;
+            height: 48px;
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: $roboto;
+        }
+    }
+}
+
+.fanzone-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+
+    .fanzone-social-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background: darken($blue, 20);
+        color: $white;
+        font-family: $roboto-con;
+        font-weight: 900;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 300ms;
+
+        &:hover {
+            background: $red;
+        }
+    }
+}
